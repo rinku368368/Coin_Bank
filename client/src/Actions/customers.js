@@ -3,7 +3,7 @@ import {Get_customers,Customers_NotFound,Get_Customer, Profile_Error} from './ty
 
 export const getCustomers = () => async (dispatch) => {
     try {
-      const res = await axios.get('http://localhost:5000/customer');
+      const res = await axios.get('https://evening-reaches-47967.herokuapp.com/customer');
       dispatch({
         type: Get_customers,
         payload: res.data
@@ -18,7 +18,7 @@ export const getCustomers = () => async (dispatch) => {
 
   export const getCustomer = (id) => async (dispatch) => {
     try {
-      const res = await axios.get(`http://localhost:5000/customer/${id}`);
+      const res = await axios.get(`https://evening-reaches-47967.herokuapp.com/customer/${id}`);
 
       dispatch({
         type: Get_Customer,
